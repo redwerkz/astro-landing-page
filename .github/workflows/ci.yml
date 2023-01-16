@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         OS: [ubuntu-latest, windows-latest]
-        NODE_VERSION: [14]
+        NODE_VERSION: [16.x]
       fail-fast: true
     steps:
       - name: Checkout
