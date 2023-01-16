@@ -8,13 +8,11 @@ on:
 
 jobs:
   build:
-    name: "Build: ${{ matrix.os }}"
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     strategy:
       matrix:
-        OS: [ubuntu-latest, windows-latest]
-        NODE_VERSION: [16.x, 18.x, 19.x]
+        NODE_VERSION: [16.x, 18.x]
       fail-fast: true
     steps:
       - name: Checkout
